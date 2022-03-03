@@ -10,7 +10,7 @@ RUN \
  install_packages \
 	bash \
 	curl \
-    git \
+    git
 
 COPY requirements.txt /requirements.txt
 
