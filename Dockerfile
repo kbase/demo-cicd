@@ -10,16 +10,9 @@ RUN \
  install_packages \
 	bash \
 	curl \
-    git \
-    python3 \
-    python3-flask \
-    python3-pip
+    git
 
 COPY requirements.txt /requirements.txt
-
-# RUN pip install requests docker python-json-logger structlog && \
-RUN pip3 install --upgrade pip && \
-    pip install -r /requirements.txt
 
 COPY . /static-server/
 
@@ -34,4 +27,4 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 ENV COMMIT_SHA=${COMMIT}
 
 WORKDIR /static-server
-ENTRYPOINT ["python3", "./app.py"]
+ENTRYPOINT ["sleep", "14d"]
